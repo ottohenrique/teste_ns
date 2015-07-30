@@ -1,0 +1,7 @@
+- O navegador abre um canal de comunicação com o SO e a rede
+- Através desse canal ele chega a um servidor de domínio (DNS), resolvendo para esse endereço (IP)
+- Algum serviço está aguardando nesse endereço/porta (187.17.75.152:80 por exemplo) e responde para esse pedido de conexão
+- Como é uma conexão HTTP, será enviado um cabeçalho com algumas informações, como endereço desejado, formatos de resposta aceitos, qual o limite de resposta cacheada, paramêtros enviados, etc.
+- O serviço que está escutando essa porta no servidor processa a requisição (uma aplicação web quebra o request/parametros e cria todo o contexto de processamento por exemplo)
+- a resposta é enviada para o cliente
+- no caso do navegador, provavelmente é uma página html a resposta esperada. o navegador processa a resposta e cria um novo request para cada elemento extra da página (imagem, js, css); imaginando que fosse um request ajax, o servidor responderia com um json/html que seria processado pelo cliente.
