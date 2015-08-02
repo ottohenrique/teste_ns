@@ -4,6 +4,14 @@ import java.security.InvalidParameterException;
 
 public class FindUniq {
 	
+	/*
+	 * Given a stream object parses it and return the
+	 * first uniq char. If none found throws an exception.
+	 * 
+	 * @return char
+	 * @throws InvalidParameterException for null stream
+	 * @throws UniqCharNotFoundException if a stream have no one uniq char.
+	 */
 	public static char firstChar(Stream stream)
 			throws InvalidParameterException, UniqCharNotFoundException {
 		

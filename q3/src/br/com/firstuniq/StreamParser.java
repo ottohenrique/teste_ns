@@ -13,6 +13,10 @@ public class StreamParser {
 		this.charTable = new HashMap<>();
 	}
 
+	/*
+	 * Given a stream, reads each character and stores in a internal
+	 * hash to count occurrences.
+	 */
 	public void parse() {
 		readStream();
 		HashMap<Character, Integer> out = filterCharTable();
@@ -22,6 +26,12 @@ public class StreamParser {
 		}
 	}
 
+	/*
+	 * After parse returns the first uniq character found
+	 * or null if none occurs.
+	 * 
+	 * @return Character
+	 */
 	public Character getUniqChar() {
 		return this.uniqChar;
 	}
